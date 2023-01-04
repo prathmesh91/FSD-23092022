@@ -8,16 +8,8 @@
 </head>
 <body>
 
-<div align="center">
-	<hr>
-	 	<h1>
-			<a href="#">Home</a> | 	
-	 		<a href="#">New Task</a> | 
-	 		<a href="#">View Task</a> | 
-	 		<a href="#">Search Task</a> | 
-	 	</h1>
-	<hr>
-</div>
+<%@ include file="menu.jsp" %>
+
 <div align="center">
 
 <h1>Welcome to ToDo Application</h1>
