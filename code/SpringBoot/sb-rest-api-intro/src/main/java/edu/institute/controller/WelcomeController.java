@@ -1,8 +1,12 @@
 package edu.institute.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import edu.institute.bean.User;
 
 @RestController // to create the REST APIs
 public class WelcomeController {
@@ -47,4 +51,41 @@ public class WelcomeController {
 		return num1 + symbol + num2 + " = " + ans;
 	}
 	
+	// http://localhost:8080/hi-msg/Abcd
+	@GetMapping("/hi-msg/{uname}")
+	public String sayHi(@PathVariable(name = "uname") String name) {
+		return "Hi, "+name;
+	}
+	
+	
+	@GetMapping("/user-details")
+	public String userData(@RequestBody User user) {
+		System.out.println("Name : " + user.getName());
+		System.out.println("Email : " + user.getEmail());
+		System.out.println("Contact : " + user.getContact());
+		return "User Info Received";
+	}
+	
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
