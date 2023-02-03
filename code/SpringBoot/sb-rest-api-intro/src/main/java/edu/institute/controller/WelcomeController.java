@@ -57,7 +57,7 @@ public class WelcomeController {
 		return "Hi, "+name;
 	}
 	
-	
+	// http://localhost:8080/user-details
 	@GetMapping("/user-details")
 	public String userData(@RequestBody User user) {
 		System.out.println("Name : " + user.getName());
