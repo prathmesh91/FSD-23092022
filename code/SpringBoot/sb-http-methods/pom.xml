@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>edu.institute</groupId>
-	<artifactId>sb-introduction</artifactId>
+	<artifactId>sb-http-methods</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>sb-introduction</name>
+	<name>sb-http-methods</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>11</java.version>
