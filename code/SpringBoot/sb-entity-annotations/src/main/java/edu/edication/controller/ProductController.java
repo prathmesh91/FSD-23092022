@@ -48,6 +48,24 @@ public class ProductController {
 		return repository.selectProductByName_SQL(name);
 	}
 	
+	@GetMapping("/get-by-price")
+	public List<Product> getProductByPrice(@RequestParam("price") double price) {
+		return repository.getListByPrice(price);
+	}
+	
+	
+	@PutMapping("/update-by-hql")
+	public String updateQuantity_HQL(@RequestParam("id") int id,@RequestParam("quantity") int qty) {
+		repository.updateQuantity_HQL(id, qty);
+		return "Product Updated SUccessfully";
+	}
+
+	@PutMapping("/update-by-sql")
+	public String updateQuantity_SQL(@RequestParam("id") int id,@RequestParam("quantity") int qty) {
+		repository.updateQuantity_SQL(id, qty);
+		return "Product Updated SUccessfully";
+	}
+	
 }
 
 
